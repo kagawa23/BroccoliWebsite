@@ -1,8 +1,5 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import App from "./App";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './app';
 
-ReactDOM.render(
-  <App message="React Sacffolding" />,
-  document.querySelector("#app")
-);
+ReactDOM.render(<App />, document.querySelector('#root'));
