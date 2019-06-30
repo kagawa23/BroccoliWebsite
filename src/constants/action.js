@@ -1,0 +1,10 @@
+const Action = {
+  RESET_STATE: 'RESET_STATE',
+  SHOW_INVITATION_FORM: 'SHOW_INVITATION_FORM',
+  SHOW_ALL_DONE: 'SHOW_ALL_DONE',
+  UPDATE_FIELD_VALIDATION: 'UPDATE_FIELD_VALIDATION'
+};
+
+Object.freeze(Action);
+
+export default Action;

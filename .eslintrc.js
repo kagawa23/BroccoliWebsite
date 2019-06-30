@@ -6,6 +6,7 @@ module.exports = {
   parser: "babel-eslint",
   extends: [
     'airbnb',
+    'plugin:jest/recommended',
     'plugin:prettier/recommended'
   ],
   globals: {
