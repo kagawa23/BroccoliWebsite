@@ -2,7 +2,6 @@
   "name": "broccoli-invitation",
   "version": "1.0.0",
   "description": "Homepage for Broccoli & Co.",
-  "main": "index.js",
   "scripts": {
     "test": "jest",
     "build": "webpack --config webpack.config.production.js --mode production",

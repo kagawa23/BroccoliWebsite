@@ -1,5 +1,20 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const autoprefixer = require('autoprefixer');
+
+const cssLoaders = [
+  'style-loader',
+  'css-loader',
+  {
+    loader: 'postcss-loader',
+    options: {
+      plugins() {
+        return [autoprefixer];
+      }
+    }
+  },
+  'sass-loader'
+];
 
 module.exports = {
   entry: './src/index.js',
@@ -15,13 +30,8 @@ module.exports = {
         exclude: /node_modules/
       },
       {
-        test: /\.css$/,
-        loader: ['style-loader', 'css-loader'],
-        exclude: /node_modules/
-      },
-      {
-        test: /\.scss$/,
-        use: ['style-loader', 'css-loader', 'sass-loader']
+        test: /\.(sa|sc|c)ss$/,
+        use: cssLoaders
       },
       {
         test: /\.(png|jpe?g|gif|svg)$/,
